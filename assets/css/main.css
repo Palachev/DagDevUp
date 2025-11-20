@@ -13,12 +13,10 @@
   --neon-cyan: #2dd4ff;
   --neon-teal: #14b8a6;
   --neon-azure: #06b6d4;
-  --neon-blue: #3b82f6;
   
   /* Primary Accents */
   --accent: var(--neon-cyan);
   --accent-2: var(--neon-purple);
-  --accent-3: var(--neon-teal);
   
   /* Glass & Borders - Premium */
   --border: rgba(255, 255, 255, 0.08);
@@ -29,20 +27,13 @@
   
   /* Gradients - Tech Noir */
   --gradient-bg: 
-    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.12), transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(45, 212, 255, 0.1), transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.08), transparent 60%),
     linear-gradient(135deg, #000000 0%, #0a0a0f 40%, #12121a 100%);
   
   --gradient-accent: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan), var(--neon-teal));
-  --gradient-glow: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(45, 212, 255, 0.4));
   
-  /* Shadows & Glows - Premium Cyber */
-  --glow-purple: 0 0 30px rgba(139, 92, 246, 0.5);
+  /* Shadows & Glows */
   --glow-cyan: 0 0 30px rgba(45, 212, 255, 0.5);
-  --glow-teal: 0 0 30px rgba(20, 184, 166, 0.5);
   --shadow-deep: 0 10px 40px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 50px rgba(45, 212, 255, 0.2);
   --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.8);
   
   font-family: "Manrope", "Inter", "Urbanist", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -54,18 +45,9 @@
   box-sizing: border-box;
 }
 
-html {
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
   background: var(--bg-deep);
   background-image: 
     url("assets/svg/mountains-tech-noir.svg"),
@@ -88,11 +70,13 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: none;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(139, 92, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(45, 212, 255, 0.06), transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.05), transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
-
 
 a {
   color: var(--accent);
@@ -292,7 +276,6 @@ h1 {
   overflow: hidden;
   box-shadow: 0 4px 25px rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .btn.primary::before {
@@ -386,9 +369,6 @@ h1 {
   padding: 5rem 5vw;
   position: relative;
   z-index: 1;
-  max-width: 100%;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .section-heading {
@@ -421,7 +401,6 @@ h1 {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-deep);
-  cursor: pointer;
 }
 
 .info-card::before {
@@ -591,7 +570,6 @@ h1 {
   position: relative;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-deep);
-  cursor: pointer;
 }
 
 .team-card::before {
@@ -624,17 +602,6 @@ h1 {
   background: linear-gradient(135deg, var(--bg-dark), var(--bg-graphite));
   position: relative;
   overflow: hidden;
-}
-
-.team-card img::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(to top, var(--bg-dark) 0%, transparent 100%);
-  pointer-events: none;
 }
 
 .team-card .team-info {
@@ -699,7 +666,7 @@ h1 {
 }
 
 .business-card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-8px);
   box-shadow: var(--glow-cyan), var(--shadow-premium);
   border-color: var(--border-bright);
 }
@@ -830,30 +797,6 @@ h1 {
   transform: translateY(0);
 }
 
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.will-animate.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 .contact-layout {
   padding: 0 5vw 4rem;
   display: grid;
@@ -918,7 +861,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient);
+  background: var(--gradient-bg);
   z-index: 1000;
 }
 
@@ -995,37 +938,6 @@ h1 {
 .specs ul {
   list-style: disc;
   padding-left: 1.25rem;
-}
-
-/* Responsive fixes */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 4rem 2rem 3rem;
-  }
-  
-  .section {
-    padding: 3rem 2rem;
-  }
-  
-  .site-header,
-  .subpage-header {
-    padding: 1rem 2rem;
-  }
-  
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .team-grid {
-    grid-template-columns: 1fr;
-    padding: 0 2rem 3rem;
-  }
-  
-  .business-card-gallery {
-    grid-template-columns: 1fr;
-    padding: 2rem;
-  }
 }
 
 @media (max-width: 640px) {
