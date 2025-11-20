@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Effects Showcase</title>
+    <link rel="stylesheet" href="assets/css/effects-showcase.css">
+</head>
+<body>
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+    
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title" data-text="Effects Showcase">Effects Showcase</h1>
+            <p class="subtitle">Modern Web Interactions & Animations</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#cards" class="nav-link">Cards</a>
+            <a href="#buttons" class="nav-link">Buttons</a>
+            <a href="#glow" class="nav-link">Glow Effects</a>
+            <a href="#particles" class="nav-link">Particles</a>
+        </nav>
+
+        <!-- Cards Section -->
+        <section id="cards" class="section">
+            <h2 class="section-title">Interactive Cards</h2>
+            <div class="cards-grid">
+                <div class="card card-1">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-icon">✨</div>
+                        <h3>Hover Effect</h3>
+                        <p>3D transform with glow</p>
+                    </div>
+                </div>
+                <div class="card card-2">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-icon">🎨</div>
+                        <h3>Gradient Shift</h3>
+                        <p>Dynamic color transitions</p>
+                    </div>
+                </div>
+                <div class="card card-3">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-icon">⚡</div>
+                        <h3>Magnetic Effect</h3>
+                        <p>Follows cursor movement</p>
+                    </div>
+                </div>
+                <div class="card card-4">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-icon">🌟</div>
+                        <h3>Particle Burst</h3>
+                        <p>Click to explode</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section id="buttons" class="section">
+            <h2 class="section-title">Animated Buttons</h2>
+            <div class="buttons-grid">
+                <button class="btn btn-1">
+                    <span>Hover Me</span>
+                    <div class="btn-shine"></div>
+                </button>
+                <button class="btn btn-2">
+                    <span>Ripple Effect</span>
+                </button>
+                <button class="btn btn-3">
+                    <span>Glow Pulse</span>
+                </button>
+                <button class="btn btn-4">
+                    <span>Magnetic</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Glow Effects Section -->
+        <section id="glow" class="section">
+            <h2 class="section-title">Glow Effects</h2>
+            <div class="glow-container">
+                <div class="glow-box glow-1">
+                    <div class="glow-text">Neon Glow</div>
+                </div>
+                <div class="glow-box glow-2">
+                    <div class="glow-text">Pulsing Light</div>
+                </div>
+                <div class="glow-box glow-3">
+                    <div class="glow-text">Gradient Shine</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Particles Section -->
+        <section id="particles" class="section">
+            <h2 class="section-title">Particle Interactions</h2>
+            <div class="particle-zone">
+                <div class="particle-trigger">
+                    <p>Move your cursor here</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float float-1"></div>
+            <div class="float float-2"></div>
+            <div class="float float-3"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/effects-showcase.js"></script>
+</body>
+</html>
+
