@@ -1,0 +1,29 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mountain-night" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(45,212,255,0.06);stop-opacity:1" />
+      <stop offset="30%" style="stop-color:rgba(139,92,246,0.04);stop-opacity:1" />
+      <stop offset="60%" style="stop-color:rgba(20,184,166,0.03);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(10,15,24,0.01);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountain-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(45,212,255,0.08);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(139,92,246,0.06);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(20,184,166,0.04);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Абстрактные горы - минималистичные контуры -->
+  <g opacity="0.4">
+    <path d="M0,600 L200,450 L400,500 L600,350 L800,400 L1000,280 L1200,320 L1400,220 L1600,260 L1800,180 L1920,200 L1920,600 Z" 
+          fill="url(#mountain-night)" />
+    <path d="M0,600 L300,420 L600,480 L900,340 L1200,380 L1500,260 L1800,300 L1920,240 L1920,600 Z" 
+          fill="url(#mountain-night)" opacity="0.6"/>
+    <path d="M0,600 L150,480 L350,520 L550,380 L750,420 L950,300 L1150,340 L1350,240 L1550,280 L1750,200 L1920,220 L1920,600 Z" 
+          fill="url(#mountain-night)" opacity="0.5"/>
+  </g>
+  <!-- Мягкие неоновые свечения -->
+  <circle cx="300" cy="200" r="150" fill="url(#mountain-glow)" opacity="0.3" filter="blur(60px)"/>
+  <circle cx="1200" cy="300" r="180" fill="url(#mountain-glow)" opacity="0.25" filter="blur(80px)"/>
+  <circle cx="1600" cy="250" r="120" fill="url(#mountain-glow)" opacity="0.2" filter="blur(50px)"/>
+</svg>
+

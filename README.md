@@ -5,7 +5,7 @@
 ## Структура
 
 - `index.html` — главная (hero, преимущества, контакт).
-- `team.html`, `business-cards.html`, `services.html`, `contact.html`, `admin.html`.
+- `directors.html`, `business-cards.html`, `services.html`, `contact.html`, `admin.html`.
 - `assets/` — CSS, JS, изображения, SVG.
 - `exports/businesscards/` — PDF/PNG/SVG (90×50 мм + 3 мм bleed, 300 DPI CMYK для PDF).
 - `dagdev-site.zip` — архив для «Скачать всё».

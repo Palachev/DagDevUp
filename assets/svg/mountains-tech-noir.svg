@@ -1,0 +1,59 @@
+<svg width="1920" height="800" viewBox="0 0 1920 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mountain-glow-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.15);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(45,212,255,0.12);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(20,184,166,0.08);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountain-glow-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(45,212,255,0.18);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(139,92,246,0.12);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(6,182,212,0.06);stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Абстрактные 3D-контуры гор в цифровом стиле -->
+  <g opacity="0.6">
+    <!-- Первый слой гор - дальний план -->
+    <path d="M0,800 L150,600 L350,650 L550,500 L750,550 L950,400 L1150,450 L1350,350 L1550,400 L1750,300 L1920,350 L1920,800 Z" 
+          fill="url(#mountain-glow-1)" 
+          filter="url(#soft-glow)"/>
+    <!-- Второй слой - средний план -->
+    <path d="M0,800 L200,580 L450,620 L700,480 L950,520 L1200,380 L1450,420 L1700,320 L1920,360 L1920,800 Z" 
+          fill="url(#mountain-glow-2)" 
+          filter="url(#soft-glow)" 
+          opacity="0.7"/>
+    <!-- Третий слой - ближний план с деталями -->
+    <path d="M0,800 L100,640 L300,680 L500,540 L700,580 L900,440 L1100,480 L1300,360 L1500,400 L1700,300 L1920,340 L1920,800 Z" 
+          fill="url(#mountain-glow-1)" 
+          filter="url(#glow)" 
+          opacity="0.5"/>
+  </g>
+  <!-- Неоновые акцентные линии на вершинах -->
+  <g opacity="0.4">
+    <path d="M150,600 L350,650 L550,500 L750,550 L950,400 L1150,450 L1350,350 L1550,400 L1750,300" 
+          fill="none" 
+          stroke="url(#mountain-glow-2)" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          filter="url(#glow)"/>
+  </g>
+  <!-- Мягкие неоновые свечения -->
+  <circle cx="400" cy="300" r="200" fill="url(#mountain-glow-1)" opacity="0.3" filter="url(#soft-glow)"/>
+  <circle cx="1200" cy="400" r="250" fill="url(#mountain-glow-2)" opacity="0.25" filter="url(#soft-glow)"/>
+  <circle cx="1600" cy="350" r="180" fill="url(#mountain-glow-1)" opacity="0.2" filter="url(#soft-glow)"/>
+</svg>
+

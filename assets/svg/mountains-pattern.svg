@@ -1,0 +1,17 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mountain-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(45,212,255,0.08);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(139,92,246,0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(10,15,24,0.02);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Абстрактные горы - минималистичные контуры -->
+  <path d="M0,400 L150,280 L300,320 L450,200 L600,260 L750,150 L900,200 L1050,120 L1200,180 L1200,400 Z" 
+        fill="url(#mountain-grad)" opacity="0.6"/>
+  <path d="M0,400 L200,300 L400,350 L600,220 L800,280 L1000,180 L1200,240 L1200,400 Z" 
+        fill="url(#mountain-grad)" opacity="0.4"/>
+  <path d="M0,400 L100,320 L250,360 L400,240 L550,300 L700,200 L850,250 L1000,160 L1200,200 L1200,400 Z" 
+        fill="url(#mountain-grad)" opacity="0.3"/>
+</svg>
+
