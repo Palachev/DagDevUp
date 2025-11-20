@@ -87,6 +87,16 @@ body::before {
   z-index: 0;
 }
 
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -285,6 +295,7 @@ h1 {
   overflow: hidden;
   box-shadow: 0 4px 25px rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn.primary::before {
@@ -298,6 +309,20 @@ h1 {
   transition: left 0.6s ease;
 }
 
+.btn.primary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  z-index: 0;
+}
+
 .btn.primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--glow-cyan), var(--shadow-deep);
@@ -305,6 +330,11 @@ h1 {
 
 .btn.primary:hover::before {
   left: 100%;
+}
+
+.btn.primary:active::after {
+  width: 300px;
+  height: 300px;
 }
 
 .btn.secondary {
@@ -410,6 +440,7 @@ h1 {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-deep);
+  cursor: pointer;
 }
 
 .info-card::before {
@@ -424,14 +455,43 @@ h1 {
   transition: opacity 0.4s ease;
 }
 
+.info-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.info-card:nth-child(1)::after {
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-teal));
+  filter: blur(20px);
+}
+
+.info-card:nth-child(2)::after {
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-teal));
+  filter: blur(20px);
+}
+
+.info-card:nth-child(3)::after {
+  background: linear-gradient(135deg, var(--neon-teal), var(--neon-azure));
+  filter: blur(20px);
+}
+
 .info-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
   border-color: var(--border-bright);
   box-shadow: var(--glow-cyan), var(--shadow-premium);
 }
 
 .info-card:hover::before {
   opacity: 1;
+}
+
+.info-card:hover::after {
+  opacity: 0.8;
 }
 
 .info-card:nth-child(2)::before {
@@ -579,6 +639,7 @@ h1 {
   position: relative;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-deep);
+  cursor: pointer;
 }
 
 .team-card::before {
@@ -594,6 +655,18 @@ h1 {
   z-index: 1;
 }
 
+.team-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  filter: blur(20px);
+}
+
 .team-card:hover {
   transform: translateY(-12px) scale(1.02);
   border-color: var(--border-bright);
@@ -602,6 +675,10 @@ h1 {
 
 .team-card:hover::before {
   opacity: 1;
+}
+
+.team-card:hover::after {
+  opacity: 0.6;
 }
 
 .team-card img {
@@ -810,6 +887,29 @@ h1 {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.will-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .will-animate.is-visible {
