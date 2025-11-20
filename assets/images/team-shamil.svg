@@ -1,0 +1,12 @@
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Абдумеджидов Шамиль">
+  <defs>
+    <linearGradient id="grad-shamil" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="36" fill="#04060f" />
+  <circle cx="160" cy="120" r="60" fill="url(#grad-shamil)" opacity="0.45" />
+  <text x="160" y="190" font-size="72" fill="#f5f7ff" font-weight="700" text-anchor="middle" font-family="Manrope,Inter,sans-serif">АШ</text>
+</svg>
+

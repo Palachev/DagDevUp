@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DagDev CMS</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body data-page="admin">
+  <div id="login-screen" class="login-screen">
+    <div class="login-box">
+      <h1>DagDev CMS</h1>
+      <p class="eyebrow">Авторизация</p>
+      <form id="login-form">
+        <label>
+          Логин
+          <input type="text" name="username" required autocomplete="username" />
+        </label>
+        <label>
+          Пароль
+          <input type="password" name="password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" class="btn primary">Войти</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="admin-content" class="admin-content" style="display: none;">
+    <header class="subpage-header">
+      <a class="logo-title" href="index.html">DagDev</a>
+      <nav>
+        <a href="services.html">Услуги</a>
+        <a href="team.html">Команда</a>
+        <a href="business-cards.html">Визитки</a>
+        <button class="btn ghost" id="logout-btn">Выйти</button>
+      </nav>
+    </header>
+
+    <main class="subpage">
+      <section class="section">
+        <p class="eyebrow">CMS / Admin</p>
+        <h1>Редактирование контента</h1>
+        <p>Все изменения сохраняются в localStorage. Для печати визиток используется генератор PDF (jsPDF).</p>
+      </section>
+
+    <section class="admin-panel" id="services-panel">
+      <h2>Услуги</h2>
+      <div class="cms-list" data-cms-list="services"></div>
+      <button class="btn primary" data-action="add-service">Добавить услугу</button>
+    </section>
+
+    <section class="admin-panel" id="contact-panel">
+      <h2>Контакты</h2>
+      <form data-cms-form="contacts">
+        <label>
+          Телефон
+          <input name="phone" type="tel" required />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Telegram
+          <input name="telegram" type="text" />
+        </label>
+        <button class="btn primary">Сохранить</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="admin-panel" id="cards-panel">
+      <h2>Визитки</h2>
+      <p>Обновите данные карточек и нажмите «Сгенерировать PDF» для версии 90×50 мм, 300 DPI (jsPDF).</p>
+      <div class="cms-cards"></div>
+      <button class="btn secondary" data-action="add-card">Добавить карточку</button>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 DagDev. Сделано в Дагестане.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script defer src="assets/js/admin.js"></script>
+</body>
+</html>
+

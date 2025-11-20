@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DagDev — Dagestan Dev | Разработка и DevOps</title>
+  <meta name="description" content="DagDev — команда из Дагестана, специализируемся на DevOps и современных веб-решениях. Свяжитесь с нами, чтобы обсудить проект." />
+  <meta property="og:title" content="DagDev — Dagestan Dev" />
+  <meta property="og:description" content="Региональная команда разработки и DevOps-решений из Дагестана." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dagdev.example" />
+  <meta property="og:image" content="assets/images/og-dagdev.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/svg/logo-dagdev.svg" />
+  <style>
+    :root { color-scheme: dark; }
+    body { opacity: 0; transition: opacity .4s ease; }
+    body.ready { opacity: 1; }
+  </style>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/svg/logo-dagdev.svg" alt="Логотип DagDev" width="48" height="48" loading="lazy" />
+      <div>
+        <span class="logo-title">DagDev</span>
+        <small>Dagestan Dev</small>
+      </div>
+    </div>
+    <nav aria-label="Основная навигация">
+      <a href="#hero">Главная</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="services.html">Услуги</a>
+      <a href="team.html">Команда</a>
+      <a href="business-cards.html">Визитки</a>
+      <a href="contact.html">Контакты</a>
+      <a href="admin.html" class="pill-link">Админ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Сделано в Дагестане</p>
+        <h1 id="hero-title">DagDev — Dagestan Dev</h1>
+        <p class="lead">Региональная команда разработки и DevOps-решений. Создаём инфраструктуру, продукты и сервисы, которые усиливают локальные инициативы и выводят проекты на международный уровень.</p>
+        <p class="mission">Мы объединяем инженерную экспертизу и дагестанский характер: точность DevOps, продуманная архитектура, уважение к культуре и бизнесу региона.</p>
+        <div class="hero-cta">
+          <button class="btn secondary" data-action="open-contact">Связаться</button>
+          <a class="btn ghost" href="#benefits">Узнать больше</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glow-sphere"></div>
+        <div class="hero-stats">
+          <p>DevOps SLA <strong>99.95%</strong></p>
+          <p>Проекты в регионе <strong>45+</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Почему DagDev</p>
+        <h2>Технологии с локальной идентичностью</h2>
+        <p>Мы создаём устойчивые цифровые системы для бизнеса Северного Кавказа и партнёров по всему миру.</p>
+      </div>
+      <div class="card-grid">
+        <article class="info-card">
+          <h3>CI/CD</h3>
+          <p>Непрерывные пайплайны, готовые к любым релизам. Скорость поставки + контроль качества.</p>
+          <a href="services.html#cicd" aria-label="Пайплайны CI/CD">Подробнее</a>
+        </article>
+        <article class="info-card">
+          <h3>Контейнеризация</h3>
+          <p>Kubernetes, Nomad, сервисные карты. Архитектура, устойчивая как горы Дагестана.</p>
+          <a href="services.html#containers" aria-label="Контейнерная стратегия">Подробнее</a>
+        </article>
+        <article class="info-card">
+          <h3>Облака</h3>
+          <p>Гибридные решения: локальные ЦОДы + глобальные облака. Безопасность, отказоустойчивость.</p>
+          <a href="services.html#cloud" aria-label="Облачные решения">Подробнее</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="services-preview" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Ближайшее обновление</p>
+        <h2>Блок услуг появится завтра</h2>
+        <p>Добавьте карточки услуг в админ-панели — весь контент обновится автоматически.</p>
+      </div>
+      <div class="services-placeholder" data-cms-target="services">
+        <article data-cms-key="service-1">
+          <h3>Инфраструктурный аудит</h3>
+          <p>Подготовим чек-лист и дорожную карту DevOps-модернизации.</p>
+        </article>
+        <article data-cms-key="service-2">
+          <h3>Платформенная команда</h3>
+          <p>Собираем наблюдаемость, CI/CD и безопасность в одном стеке.</p>
+        </article>
+        <article data-cms-key="service-3">
+          <h3>Экстренный DevOps</h3>
+          <p>Поддержка 24/7 для релизов и миграций без простоев.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">Связаться</p>
+        <h2 id="contact-title">Команда DagDev на связи</h2>
+        <p>Заполните форму — ответим в течение рабочего дня.</p>
+      </div>
+      <form class="contact-form" aria-label="Форма обратной связи DagDev">
+        <label>
+          Имя и компания
+          <input type="text" name="name" required placeholder="Например, Мурад | Caspian Ventures" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@company.com" />
+        </label>
+        <label>
+          Запрос
+          <textarea name="message" rows="4" required placeholder="Опишите проект или задачу..."></textarea>
+        </label>
+        <button type="submit" class="btn primary">Отправить</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Контакты:</strong>
+      <a href="tel:+79990000000" data-cms-contact="phone">+7 (999) 000-00-00</a>
+      <a href="mailto:hi@dagdev.ru" data-cms-contact="email">hi@dagdev.ru</a>
+    </div>
+    <p>© 2025 DagDev. Сделано в Дагестане.</p>
+  </footer>
+
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>
+

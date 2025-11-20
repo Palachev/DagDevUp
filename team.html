@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Команда DagDev</title>
+  <meta name="description" content="Команда DagDev — инженеры и руководители из Дагестана." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body data-page="team">
+  <header class="subpage-header">
+    <a class="logo-title" href="index.html">DagDev</a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="business-cards.html">Визитки</a>
+      <a href="services.html">Услуги</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="subpage">
+    <section class="section">
+      <p class="eyebrow">Команда DagDev</p>
+      <h1>Лидеры и команды</h1>
+      <p>Мы опираемся на инженерную культуру Дагестана: дисциплина DevOps, современный продуктовый подход и уважение к локальным бизнесам.</p>
+    </section>
+
+    <section class="team-grid" aria-label="Состав руководства">
+      <article class="team-card" id="kamil">
+        <img src="assets/images/team-kamil.svg" alt="Палачев Камиль — CEO DagDev" loading="lazy" width="320" height="320" />
+        <div>
+          <p class="eyebrow">CEO | DagDev</p>
+          <h2>Палачев Камиль</h2>
+          <p>Основатель компании. Руководит стратегией и развитием.</p>
+          <div class="card-actions">
+            <a class="btn secondary" href="business-cards.html#kamil">Посмотреть визитку</a>
+            <a class="btn ghost" href="#contact">Связаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card" id="alik">
+        <img src="assets/images/team-alik.svg" alt="Алиханов Алик — CTO DagDev" loading="lazy" width="320" height="320" />
+        <div>
+          <p class="eyebrow">CTO | DagDev</p>
+          <h2>Алиханов Алик</h2>
+          <p>Отвечает за архитектуру, DevOps и внедрение CI/CD.</p>
+          <div class="card-actions">
+            <a class="btn secondary" href="business-cards.html#alik">Посмотреть визитку</a>
+            <a class="btn ghost" href="#contact">Связаться</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card" id="shamil">
+        <img src="assets/images/team-shamil.svg" alt="Абдумеджидов Шамиль — CFO DagDev" loading="lazy" width="320" height="320" />
+        <div>
+          <p class="eyebrow">CFO | DagDev</p>
+          <h2>Абдумеджидов Шамиль</h2>
+          <p>Финансовое управление и операционная поддержка.</p>
+          <div class="card-actions">
+            <a class="btn secondary" href="business-cards.html#shamil">Посмотреть визитку</a>
+            <button class="btn ghost" data-member="shamil" data-action="contact-member">Связаться</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-heading">
+        <p class="eyebrow">Контакты</p>
+        <h2>Напишите нам</h2>
+        <p>Запрос попадёт сразу к нужному руководителю.</p>
+      </div>
+      <form class="contact-form">
+        <label>
+          Имя
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Кому адресовано
+          <select name="recipient">
+            <option value="kamil">CEO — Камиль</option>
+            <option value="alik">CTO — Алик</option>
+            <option value="shamil">CFO — Шамиль</option>
+          </select>
+        </label>
+        <label>
+          Сообщение
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Отправить</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Контакты:</strong>
+      <a href="tel:+79990000000" data-cms-contact="phone">+7 (999) 000-00-00</a>
+      <a href="mailto:hi@dagdev.ru" data-cms-contact="email">hi@dagdev.ru</a>
+    </div>
+    <p>© 2025 DagDev. Сделано в Дагестане.</p>
+  </footer>
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>
+

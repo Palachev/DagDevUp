@@ -1,0 +1,12 @@
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Алиханов Алик">
+  <defs>
+    <linearGradient id="grad-alik" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="36" fill="#060918" />
+  <circle cx="160" cy="120" r="60" fill="url(#grad-alik)" opacity="0.4" />
+  <text x="160" y="190" font-size="72" fill="#f5f7ff" font-weight="700" text-anchor="middle" font-family="Manrope,Inter,sans-serif">AA</text>
+</svg>
+

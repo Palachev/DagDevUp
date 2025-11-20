@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1133" height="661" viewBox="0 0 1133 661">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgb(16, 185, 129)" />
+      <stop offset="100%" stop-color="rgb(168, 85, 247)" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="60" fill="url(#grad)" />
+  <text x="120" y="140" font-family="Manrope,Inter,sans-serif" font-size="96" fill="#050812">DagDev</text>
+  <text x="120" y="240" font-family="Manrope,Inter,sans-serif" font-size="72" fill="#050812">Алиханов Алик</text>
+  <text x="120" y="300" font-size="48" fill="#0f172a">CTO | DagDev</text>
+  <text x="120" y="370" font-size="42" fill="#0f172a">+7 (999) 000-02-02</text>
+  <text x="120" y="420" font-size="42" fill="#0f172a">alik@dagdev.ru</text>
+  <text x="120" y="470" font-size="42" fill="#0f172a">dagdev.ru/cto</text>
+</svg>
